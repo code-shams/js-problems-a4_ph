@@ -7,7 +7,7 @@ function calculateVAT( price ){
 }
 
 
-function  validContact( contact ) {
+function validContact( contact ) {
     if ( typeof contact !== "string" ){
         return "Invalid"
     }
