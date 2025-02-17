@@ -16,3 +16,25 @@ function validContact( contact ) {
     }
     return false;
 }
+
+
+function  willSuccess( marks ){
+    if ( !Array.isArray(marks) ){
+        return "Invalid";
+    }
+    let passedTests = 0;
+    let failedTests = 0;
+    for (const mark of marks) {
+        if ( mark >= 50 ){
+            passedTests++;
+        }
+        else{
+            failedTests++;
+        }
+    }
+    if ( passedTests > failedTests){
+        return true;
+    }
+    return false
+}
+
