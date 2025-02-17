@@ -38,3 +38,17 @@ function  willSuccess( marks ){
     return false
 }
 
+function  validProposal( person1 , person2 ){
+    if ( typeof person1 !== 'object' || Array.isArray(person1) || person1 === null ){
+        return "Invalid";
+    }
+    else if( typeof person2 !== 'object' || Array.isArray(person2) || person2 === null ){
+        return "Invalid";
+    }
+    if ( person1.gender !== person2.gender && Math.abs(person1.age - person2.age)<=7 ){
+        return true;
+    }
+    return false;
+}
+
+
