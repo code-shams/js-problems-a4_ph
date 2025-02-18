@@ -38,7 +38,8 @@ function  willSuccess( marks ){
     return false
 }
 
-function  validProposal( person1 , person2 ){
+
+function validProposal( person1 , person2 ){
     if ( typeof person1 !== 'object' || Array.isArray(person1) || person1 === null ){
         return "Invalid";
     }
@@ -52,3 +53,18 @@ function  validProposal( person1 , person2 ){
 }
 
 
+function  calculateSleepTime( times ){
+    const outputTime = {};
+    let totalSeconds = 0;
+    for (const element of times) {
+        if (typeof element !== 'number'){
+            return "Invalid"
+        }
+        totalSeconds += element;
+    }
+        outputTime.hour = Math.floor(totalSeconds/3600);
+        outputTime.minute = Math.floor((totalSeconds%3600) / 60);
+        outputTime.second = ((totalSeconds%60) % 60);
+    
+    return outputTime;
+}
