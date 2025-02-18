@@ -64,7 +64,7 @@ function  calculateSleepTime( times ){
     }
         outputTime.hour = Math.floor(totalSeconds/3600);
         outputTime.minute = Math.floor((totalSeconds%3600) / 60);
-        outputTime.second = ((totalSeconds%60) % 60);
+        outputTime.second = ((totalSeconds%3600) % 60);
     
     return outputTime;
 }
